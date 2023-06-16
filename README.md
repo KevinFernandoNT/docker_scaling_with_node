@@ -1,5 +1,5 @@
 # docker_scaling_with_node
-This is a test repository for docker  container scaling and nginx load balancing with node js app 
+This is a test repository for docker  container scaling and nginx load balancing with a node js app 
 
 #How to run the application 
 
