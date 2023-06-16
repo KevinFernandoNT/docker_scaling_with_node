@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  server:
+    # CANNOT ADD A CONTAINER NAME IF WE SCALE A CONTAINER DUE TO DUPLICATE NAMING
+    # container_name: node_server
+    build: .
+    command: node index.js
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx_config:/etc/nginx/conf.d
+    depends_on:
+      - server
+    ports:
+      - 3000:3000
